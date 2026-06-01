@@ -1,0 +1,5 @@
+->Created a VF page PSQuickbooksTokenpage upon click on button 'Authorize QuickBooks Account' it will invoke the class PS_QBTokenUtil and the method authorize 
+->The method authorize will authorize with quickbooks and it will return PageReference(authorizeUrl) and when pages refreshes in vf page it will call getAccessToken() method
+->get_accessToken is called where authorization code is been picked from url :  String code   = ApexPages.currentPage().getParameters().get('code'); 
+-> and we are gonna generate access token here and we will store the response body in custom meta data.
+->Once we have access token we will create a customer in quickbooks 
